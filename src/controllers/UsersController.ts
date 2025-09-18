@@ -3,10 +3,10 @@ import { formatResponse } from "../utils/constants";
 import { createUsersValidationSchema, getUserDetailsValidationSchema, loginUserValidationSchema, } from "../validationSchema/userControllerValidationSchema";
 import bcrypt from 'bcrypt';
 import redis from "../config/redis";
-import { io } from "../server";
-import { Users } from "../models";
+import { io } from "../server"; 
 import moment from 'moment';
 import jwt from 'jsonwebtoken';
+import { Users } from "../models/Users";
 
 const JWT_SECRET = process.env.JWT_SECRET || 'CODESFORTOMMAROW';
 interface LoginPayload {
